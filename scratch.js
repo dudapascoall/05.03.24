@@ -2,7 +2,7 @@ const posicaoSuperiorInicial = 50,
       posicaoEsquerdaInicial = 50,
       posicaoSuperiorFinal = 500,
       posicaoEsquerdaFinal = 500,
-      img = document.getElementById('imgAvatar'),
+      imgAvatar = document.getElementById('imgAvatar'),
       styleAvatar = window.getComputedStyle(imgAvatar);
 
     var posicaoSuperior = 50,
@@ -27,6 +27,45 @@ function getLeftStyle(elementToGet) {
 function moverParaEsquerda() {
     console.clear();
     leftAvatar = getLeftStyle(imgAvatar);
+    if (leftAvatar > posicaoEsquerdaInicial) {
+        posicaoEsquerda -= 1;
+        imgAvatar.style.left = posicaoEsquerda + "px";
+    } else{
+        console.error("Ops! Chegou ao limite e nao é possivel mais mover para esqueda. Tente outro botão!");
+    }
+    console.log("Posição do avatar a esquerda: ", imgAvatar.style.left);
+}
+
+
+function moverParaDireita() {
+    console.clear();
+    leftAvatar = getLeftStyle(imgAvatar);
+    if (leftAvatar > posicaoEsquerdaInicial) {
+        posicaoEsquerda += 1;
+        imgAvatar.style.left = posicaoEsquerda + "px";
+    } else{
+        console.error("Ops! Chegou ao limite e nao é possivel mais mover para esqueda. Tente outro botão!");
+    }
+    console.log("Posição do avatar a esquerda: ", imgAvatar.style.left);
+}
+
+
+function moverParaCima() {
+    console.clear();
+    topAvatartAvatar = getLeftStyle(imgAvatar);
+    if (leftAvatar > posicaoEsquerdaInicial) {
+        posicaoEsquerda += 1;
+        imgAvatar.style.left = posicaoEsquerda + "px";
+    } else{
+        console.error("Ops! Chegou ao limite e nao é possivel mais mover para esqueda. Tente outro botão!");
+    }
+    console.log("Posição do avatar a esquerda: ", imgAvatar.style.left);
+}
+
+
+function moverParaBaixo() {
+    console.clear();
+    topAvatar = getLeftStyle(imgAvatar);
     if (leftAvatar > posicaoEsquerdaInicial) {
         posicaoEsquerda -= 1;
         imgAvatar.style.left = posicaoEsquerda + "px";
